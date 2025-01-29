@@ -25,12 +25,11 @@ const clickHandler = (link) => {
 links.forEach((link) => {
     link.addEventListener("click" , () => clickHandler(link))
 })
- document.querySelector('.container').style.display = 'none'
 // loader
 document.addEventListener('DOMContentLoaded', function() {
     // 3 ثانیه (3000 میلی‌ثانیه) صبر کنید
     setTimeout(function() {
-        document.querySelector('.container').style.display = 'block'
+        document.querySelector('.conteiner').style.display = 'block'
       document.querySelector('.loader').style.display = 'none';
     });
   });
