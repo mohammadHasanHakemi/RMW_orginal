@@ -5,6 +5,38 @@
     font-family: 'myFont';
     src: url(../Fonts/YekanBakh-VF.woff2) format('woff');
   }
+  @font-face {
+    font-family: 'shabnam';
+    src: url('../Fonts/Shabnam-font-v2.4.0/Shabnam.woff2') format('woff');
+
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'shabnam-bold';
+    src: url('../Fonts/Shabnam-font-v2.4.0/Shabnam-Bold.woff2') format('woff');
+    font-weight: bold;
+  }
+  @font-face {
+    font-family: 'samim';
+    src: url('../Fonts/otherfonts/samim-font-v2.0.1/Samim.woff2') format('woff');
+  }
+  @font-face {
+    font-family: 'yazid-bold';
+    src: url('../Fonts/otherfonts/vazir-font-v18.0.0/Vazir-Bold.woff2') format('woff');
+    font-weight: bold;
+  }
+  @font-face {
+    font-family: 'nastalig';
+    src: url('../Fonts/IranNastaliq\ Web.woff2') format('woff');
+    font-weight: bold;
+  }
+  @font-face {
+    font-family: 'outline';
+    src: url('../Fonts/DimaYekanOutline-\(www.FarsGraphic.com\)-7s.woff2') format('woff');
+    font-weight: bold;
+  }
 /* add font  */
 * {
     margin: 0;
@@ -59,12 +91,11 @@ body {
 }
 
 .navbar-logo {
-    font-size: 2rem;
-    font-weight: 600;
-    color: #fff;
-    text-decoration: none;
     cursor: pointer;
     animation: animated-text 3s linear infinite;
+    align-items: center;
+    justify-content: center;
+    
 }
 
 .navbar-container .navbar-menu {
@@ -109,7 +140,12 @@ body {
     background-color: #fff;
     transition: all 0.3s ease-in-out;
 }
+.ali{
+    padding-top: 100px;
+    background-color: #00ff99;
+    background: transparent;
 
+}
 
 
 
@@ -149,44 +185,102 @@ body {
     
 }
 .property-f-Music h1{
+    font-family: "nastalig";
     text-align: right;
 font-size: 50px;
 font-weight: 700;
-color: #fff;
+color: #f7f7f7;
+margin-bottom: -10px;
 }
 .property-f-Music p{
-    font-size: 35px;
+    font-family: 'samim';
+    font-size: 25px;
     font-weight: 500;
-    color: #ffffff;
+    color: #635a5a;
     
 }
-.Play{
+.btn-music{
     margin-top: 2rem;
-    cursor: pointer;
 }
+.Play{
+    font-family: "outline";
+    border: none;
+    padding: 2px 20px;
+    border-radius: 17px;
+    cursor: pointer;
+    font-size: 40px;
+    color:  rgb(252, 193, 0) ;
+    /* font-weight: ; */
+    background-color: #636060;
+}
+
 .Play img{
 width: 4rem;
 }
 
-.top-5m td{
-    padding-top: 3rem;
+ /* top 5 */
+ .top5Musics{
+    margin-top: 7rem;
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+ }
 
-    padding-left: 10rem;
+.top5Musics h2{
+        font-size: 3rem;
+        font-weight: bold;
+        color: #fff;
+        animation: animated-text 5s linear infinite;
 }
-.top-5m thead td{
-    font-size: 35px;
+.topMusic{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+/* .topMusicproperty{
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+} */
+
+.topMusic h3{
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: right;
+    font-size: 25px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.topMusic p{
+    margin: auto 0px;
+    font-size: 20px;
     font-weight: 500;
-    color: #fcfcfc;
+    color: #ffffff;
     
 }
+.num{
+    font-size: 100px;
+    font-weight: 700;
+    color: #fff; 
+    margin-top: auto;
+    margin-bottom: auto;
+}
 
-
-
-
-
-
-
-
+.playimg{
+    width: 70px !important;
+    height: 70px !important;
+}
+.playimg:hover{
+    opacity: 0;
+    
+}
+.play:hover{
+    background-color: #101257 !important;
+}
 
 
 
@@ -198,7 +292,9 @@ width: 4rem;
     .navbar {
         backdrop-filter: none;
     }
-
+.navbar-container .navbar-menu li a{
+    font-size: 1.2rem;
+}
     .navbar-container .navbar-menu {
         display: none;
         flex-direction: column;
@@ -288,7 +384,7 @@ width: 4rem;
     }
 
     .navbar-container .navbar-menu li a {
-        font-size: 1.2rem;
+        font-size: 1rem;
         padding: 3px 15px;
     }
     .first-music-c{
@@ -322,10 +418,9 @@ width: 4rem;
         color: #ffffff;
         
     }
-    .Play{
+    .btn-music{
        margin-left: auto;
        margin-right: auto;
-        margin-top: 2rem;
         cursor: pointer;
     }
     .Play img{
@@ -340,11 +435,9 @@ width: 4rem;
         text-shadow: none;
     }
     50% {
-        text-shadow: 0 0 10px #9323ef,
-            0 0 20px #9323ef,
-            0 0 40px #9323ef,
-            0 0 80px #9323ef,
-            0 0 100px #9323ef;
+        text-shadow: 0 0 10px rgba(252, 194, 2, 0.5),
+            0 0 20px rgb(252, 193, 0.5),
+            0 0 40px rgb(252, 193, 0.5);
     }
     100% {
         text-shadow: none;
