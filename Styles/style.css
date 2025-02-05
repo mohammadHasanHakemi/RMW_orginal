@@ -117,7 +117,7 @@ body {
     white-space: nowrap;
 }
 
-.lamp:hover ,
+.navbar-container .navbar-menu li a:hover ,
 .navbar-container .navbar-menu li a.active {
     color: #162530;
     background: rgb(252, 193, 0);
@@ -223,7 +223,8 @@ width: 4rem;
     margin-top: 7rem;
     display: flex;
     flex-direction: column;
-    width: 75%;
+    width: 90%;
+    /* gap: 1rem; */
  }
 
 .top5Musics h2{
@@ -233,24 +234,45 @@ width: 4rem;
         animation: animated-text 5s linear infinite;
 }
 .topMusic{
+    font-family: 'samim';
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    background-color: transparent;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 15px;
 }
-/* .topMusicproperty{
-    margin-top: auto;
-    margin-bottom: auto;
+.topMusic:hover h3
+,.topMusic.active h3{
+color: #ff4545;    
+}
+.topMusic:hover .p,
+.topMusic.active .p{
+    color: rgb(252, 193, 0) ;    
+}
+
+.gifplay{
+        background-color: #ff4545;
+        height: 70px;
+        width: 100px;
+        margin: auto 0px;
+}
+.propertyTopMusic{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    
-} */
-
+    margin: auto 0px;
+    gap: 15px;
+}
+.poster-property{
+    display: flex;
+    gap: 30px;
+}
 .topMusic h3{
     margin-top: auto;
     margin-bottom: auto;
     text-align: right;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 700;
     color: #fff;
 }
@@ -261,6 +283,10 @@ width: 4rem;
     font-weight: 500;
     color: #ffffff;
     
+}
+.propertyTopMusic .p{
+    color: #635a5a;
+    font-weight: 800;
 }
 .num{
     font-size: 100px;
@@ -281,6 +307,71 @@ width: 4rem;
 .play:hover{
     background-color: #101257 !important;
 }
+.top5MisicsContainer{
+
+}
+.top5MisicsContainerR{
+    width: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -344,7 +435,7 @@ width: 4rem;
     .property-f-Music p{
         font-size: 20px;
         font-weight: 500;
-        color: #ffffff;
+    
         
     }
     .Play{
@@ -354,6 +445,13 @@ width: 4rem;
     .Play img{
     width: 3rem;
     height: 3rem;
+    }
+    .fr{
+        flex-direction: column !important;
+    }
+    
+    .top5MisicsContainerR{
+        width: 100%;
     }
 }
 
@@ -387,6 +485,8 @@ width: 4rem;
         font-size: 1rem;
         padding: 3px 15px;
     }
+
+
     .first-music-c{
         margin-top: 3rem;
         /* send to middle  */
@@ -415,7 +515,7 @@ width: 4rem;
         text-align: center;
         font-size: 20px;
         font-weight: 500;
-        color: #ffffff;
+     
         
     }
     .btn-music{
@@ -427,7 +527,37 @@ width: 4rem;
     width: 3rem;
     height: 3rem;
     }
+    .top5Musics h2{
+        font-size: xx-large;
+        margin: 0px auto;
+    }
+    .topMusic{
+        flex-direction: column;
+    }
+    .topMusic .poster-property{
+        flex-direction: column;
+        margin:  0px auto;
+    }
+    .propertyTopMusic{
+        flex-direction: row;
+    }
+    .gifplay{
+        margin: auto auto;
+    }
+    .propertyTopMusic h3{
+        font-size: 30px;
+    }
+    .propertyTopMusic .p{
+        margin-top: auto;
+        margin-bottom: 3px;
+        font-size: medium;
+    }
+    .ali{
+        padding-top: 170px !important;
+        background-color: #00ff99;
+        background: transparent;
     
+    }
 }
 /* glowing logo or text  */
 @keyframes animated-text {
@@ -521,4 +651,38 @@ width: 4rem;
         width: 90vw;
         height: auto;
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ready to use  */
+.fr{
+    display: flex;
+    flex-direction: row;
+
+}
+.fc{
+    display: flex;
+    flex-direction: column;
+}
+.middle{
+    margin: auto 0px;
+}
+.center{
+    margin: 0px auto;
+}
+.f-b{
+    justify-content: space-between;
+}
+.f-a{
+    justify-content: space-around;
 }
