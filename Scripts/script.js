@@ -19,7 +19,7 @@ const clickHandler = (link) => {
         link.classList.remove("active")
     })
     link.classList.add("active")
-    console.log("sasdasds");
+    // console.log("sasdasds");
 }
 
 links.forEach((link) => {
@@ -50,6 +50,7 @@ next.addEventListener('click', function () {
 prev.addEventListener('click', function () {
     let items = document.querySelectorAll('.item');
     let prop = document.querySelectorAll('.prop-one-Album');
+    
     document.querySelector('.cards').prepend(items[items.length - 1]);
     document.querySelector('.propertyAlbums').prepend(prop[prop.length - 1]);
 
@@ -76,7 +77,7 @@ document.getElementById('searchInput').addEventListener('input', function() {
             resultItem.href = `#${h3.id}`; // لینک به id مربوطه
              // نمایش هر لینک در یک خط جدید
             resultItem.style.margin = '5px 0'; // فاصله بین لینک‌ها
-            resultItem.style.color = '#007BFF'; // رنگ لینک
+            resultItem.style.color = 'rgb(252, 193, 0.5)'; // رنگ لینک
             resultItem.style.textDecoration = 'none'; // حذف زیرخط لینک
             resultsContainer.appendChild(resultItem);
         }
@@ -116,21 +117,28 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log(Album)
     // کنترل پخش و توقف موسیقی
     playPauseButton.addEventListener('click', function () {
+        let gifplay = document.querySelector('.active .gifplay');
         const img = document.getElementById('imgPlay');
         if (audio.paused) {
             audio.play();
             img.src = "Images/icons/paused.png";
+            gifplay.src = "images/Mplay.gif";
+
         } else {
             audio.pause();
             img.src = "Images/icons/play.png";
+            gifplay.src = "images/Mplay.png";
         }
     });
 
     // توقف کامل موسیقی
     stopButton.addEventListener('click', function () {
+        let gifplay = document.querySelector('.active .gifplay');
+        const img = document.getElementById('imgPlay');
         audio.pause();
         audio.currentTime = 0;
         img.src = "Images/icons/play.png";
+        gifplay.src = "images/Mplay.png";
     });
 
     // کنترل حجم صدا
@@ -141,6 +149,9 @@ document.addEventListener('DOMContentLoaded', function () {
     // تغییر موسیقی و پوستر با کلیک روی دکمه‌های پلی‌لیست
     songButtons.forEach(button => {
         button.addEventListener('click', function () {
+            const img = document.getElementById('imgPlay');
+            let gifplay = document.querySelector('.active .gifplay');
+            console.log(gifplay);
             const songSrc = button.getAttribute('data-src');
             const posterSrc = button.getAttribute('data-poster');
             const textsrc = button.getAttribute('data-name')
@@ -151,6 +162,7 @@ document.addEventListener('DOMContentLoaded', function () {
             Album.textContent = propsrc
             audio.play();
             img.src = "Images/icons/paused.png";
+            gifplay.src = "images/Mplay.gif";
         });
     });
 
